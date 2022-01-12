@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <div class="container">
-        <!-- Sidebar -->
-        <aside class="container__sidebar">
+
+    <section class="container__nav">
+        <nav class="nav">
             <div class="menu">
                 <div class="menu-button" id="menu-button">
                     <div class="bar1"></div>
@@ -26,7 +26,14 @@
                     <div class="bar3"></div>
                 </div>
             </div>
-            <div class="sidebar__body">
+        </nav>
+    </section>
+
+    <section class="container__body">
+        <!-- Sidebar -->
+        <aside class="container__sidebar">
+            
+            <div class="sidebar__main">
                 <a class="sidebar__option" href="">
                     <div class="option__content">
                         <i class="fas fa-home"></i>
@@ -40,26 +47,29 @@
                         <span>LandMark</span>
                     </div>
                 </a>
+                <hr>
                 <a class="sidebar__option" href="">
                     <div class="option__content">
                         <i class="fab fa-docker"></i>
                         <span>Docker</span>
                     </div>
                 </a>
+                <hr>
                 <a class="sidebar__option" href="">
                     <div class="option__content">
                         <i class="fas fa-landmark"></i>
                         <span>LandMark</span>
                     </div>
                 </a>
-    </div>
-    </aside>
+            </div>
+        </aside>
 
-    <!-- Main -->
-    <main class="container__main">
-        ...
-    </main>
-    </div>
+        <!-- Main -->
+        <main class="container__main">
+            ...
+        </main>
+    </section>
+
 </body>
 
 </html>

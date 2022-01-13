@@ -1,6 +1,7 @@
 :root {
-    --timeSidebarTransition: 0.5s;
-    --bgSidebarColor: rgba(0, 0, 0, 0.397);
+    --timeSidebarTransition: 0.3s;
+    --closeWidthSideBar: 3rem;
+    --bgSidebarColor: rgb(73, 73, 73);
     --heightNavBar: 50px;
     --heightContainerBody: 100vh;
 }
@@ -42,7 +43,7 @@ body {
 }
 
 .container__sidebar:not(.open) {
-    width: 3rem;
+    width: var(--closeWidthSideBar);
 }
 
 .option__content {
@@ -122,3 +123,21 @@ body {
     background-color: var(--bgSidebarColor);
 }
 
+
+@media (max-width: 450px) {
+    .container__body{
+        position: relative;
+    }
+
+    .container__sidebar:not(.open){
+        transform: translate(calc(var(--closeWidthSideBar) * -1));
+    }
+
+    .container__sidebar{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        background-color: var(--bgSidebarColor)
+    }
+}
